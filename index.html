@@ -1,110 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>روابط التواصل</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قلادة الميزان للذهب و المجوهرات</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
 
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Cairo', sans-serif;
-        background: url("https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/pack.jpg") no-repeat center center/cover;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
+html, body {
+    overflow-x: hidden;
+}
 
-    .overlay {
-        background: rgba(0,0,0,0.50);
-        width: 100%;
-        min-height: 100vh;
-        padding: 40px 15px;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    height: 100vh;
+    background-color: #000; /* لون أسود للخلفية حول الصورة */
+    background-image: url("https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/pack.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* أهم نقطة: عدم تشويه الخلفية */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
-    .container {
-        max-width: 420px;
-        margin: auto;
-        animation: fadeIn 1.0s ease;
-    }
+/* طبقة شفافة على الخلفية */
+.overlay {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 15px;
+    background: rgba(0,0,0,0.55);
+}
 
-    /* Logo / Necklace Icon */
-    .logo {
-        width: 140px;
-        margin-top: 20px;
-        filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
-        animation: fadeSlide 1.3s ease;
-    }
+.container {
+    max-width: 420px;
+    margin: auto;
+    animation: fadeIn 1s ease;
+}
 
-    .title {
-        margin-top: 15px;
-        font-size: 28px;
-        font-weight: 700;
-        color: #f5d98c; 
-        letter-spacing: 1px;
-        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.4);
-        animation: fadeSlide 1.3s ease 0.2s backwards;
-    }
+/* اللوجو (القلادة) */
+.logo {
+    width: 150px;
+    margin-top: 30px;
+    filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
+}
 
-    /* Social Icons Row */
-    .social-icons {
-        margin: 25px 0;
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        animation: fadeSlide 1.3s ease 0.3s backwards;
-    }
+/* النص الذهبي */
+.title {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #f5d98c;
+    text-shadow: 0px 0px 8px rgba(255,215,0,0.4);
+}
 
-    .social-icons img {
-        width: 32px;
-        height: 32px;
-        filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
-        transition: 0.3s;
-        cursor: pointer;
-    }
+/* أيقونات السوشيال */
+.social-icons {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .social-icons img:hover {
-        transform: scale(1.18);
-    }
+.social-icons img {
+    width: 34px;
+    height: 34px;
+    filter: drop-shadow(0px 0px 6px rgba(255,215,0,0.3));
+    transition: 0.3s;
+}
 
-    /* Buttons */
-    .btn {
-        width: 100%;
-        background: rgba(255,255,255,0.08);
-        padding: 16px;
-        border-radius: 50px;
-        margin: 12px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 17px;
-        color: #f7e0a5;
-        border: 1px solid rgba(255,218,120,0.25);
-        box-shadow: 0 0 12px rgba(255, 215, 0, 0.20);
-        cursor: pointer;
-        transition: 0.3s;
-        backdrop-filter: blur(6px);
-    }
+.social-icons img:hover {
+    transform: scale(1.15);
+}
 
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 0 18px rgba(255, 215, 0, 0.45);
-        background: rgba(255,255,255,0.15);
-    }
+/* الأزرار */
+.btn {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    padding: 16px;
+    border-radius: 50px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    color: #f7e0a5;
+    border: 1px solid rgba(255,218,120,0.25);
+    box-shadow: 0 0 12px rgba(255,215,0,0.18);
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
 
-    .btn img {
-        width: 27px;
-        height: 27px;
-    }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(255,215,0,0.45);
+}
 
-    @keyframes fadeSlide {
-        from { opacity: 0; transform: translateY(12px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
+.btn img {
+    width: 27px;
+    height: 27px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 </style>
 </head>
 
@@ -113,22 +118,22 @@
 <div class="overlay">
 <div class="container">
 
-    <!-- Necklace Icon -->
-    <img class="logo" src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/ddddd-artguru-artguru.png" alt="Logo">
+    <!-- اللوجو -->
+    <img class="logo" src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/logo.png">
 
-    <!-- Gold Title -->
+    <!-- النص -->
     <div class="title">أهلاً بفخامتك...</div>
 
-    <!-- Social Icons -->
+    <!-- الأيقونات -->
     <div class="social-icons">
-        <a href="https://www.instagram.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/instagram-1-svgrepo-com.svg"></a>
-        <a href="https://www.snapchat.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/snapchat-svgrepo-com.svg"></a>
+        <a href="https://www.instagram.com/libra_necklace"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/instagram-1-svgrepo-com.svg"></a>
+        <a href="https://www.snapchat.com/add/mwssqldlmyzn"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/snapchat-svgrepo-com.svg"></a>
         <a href="https://www.tiktok.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/tiktok-svgrepo-com.svg"></a>
-        <a href="https://wa.me/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/whatsapp-svgrepo-com.svg"></a>
+        <a href="https://wa.me/966552918777"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/whatsapp-svgrepo-com.svg"></a>
     </div>
-    
-    <!-- Buttons -->
-    <a href="https://wa.me/">
+
+    <!-- الأزرار -->
+    <a href="https://wa.me/966552918777">
         <div class="btn">
             <img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/whatsapp-svgrepo-com.svg">
             <span>WhatsApp</span>
@@ -136,7 +141,7 @@
         </div>
     </a>
 
-    <a href="https://www.snapchat.com/">
+    <a href="https://www.snapchat.com/add/mwssqldlmyzn">
         <div class="btn">
             <img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/snapchat-svgrepo-com.svg">
             <span>Snapchat</span>
@@ -144,7 +149,7 @@
         </div>
     </a>
 
-    <a href="https://www.instagram.com/">
+    <a href="https://www.instagram.com/libra_necklace">
         <div class="btn">
             <img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/instagram-1-svgrepo-com.svg">
             <span>Instagram</span>
