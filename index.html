@@ -8,47 +8,55 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* أهم إصلاح */
+}
+
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* منع الانزلاق يمين ويسار */
+    width: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Cairo', sans-serif;
-    height: 100vh;
-    background-color: #000; /* لون أسود للخلفية حول الصورة */
+    background-color: #000;
     background-image: url("https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/pack.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain; /* أهم نقطة: عدم تشويه الخلفية */
+    background-position: top center;
+    background-size: cover; /* أجمل وأكثر ثباتًا من contain */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-/* طبقة شفافة على الخلفية */
+/* طبقة التعتيم */
 .overlay {
     width: 100%;
     min-height: 100vh;
-    padding: 40px 15px;
+    padding: 40px 20px;
     background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
 }
 
+/* الحاوية الرئيسية */
 .container {
+    width: 100%;
     max-width: 420px;
-    margin: auto;
     animation: fadeIn 1s ease;
 }
 
-/* اللوجو (القلادة) */
+/* اللوجو */
 .logo {
     width: 150px;
     margin-top: 30px;
     filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
 }
 
-/* النص الذهبي */
+/* العنوان */
 .title {
     margin-top: 15px;
     font-size: 28px;
@@ -57,19 +65,19 @@ body {
     text-shadow: 0px 0px 8px rgba(255,215,0,0.4);
 }
 
-/* أيقونات السوشيال */
+/* صف الأيقونات */
 .social-icons {
     margin: 30px 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .social-icons img {
-    width: 34px;
-    height: 34px;
-    filter: drop-shadow(0px 0px 6px rgba(255,215,0,0.3));
+    width: 32px;
+    height: 32px;
     transition: 0.3s;
+    filter: drop-shadow(0px 0px 6px rgba(255,215,0,0.3));
 }
 
 .social-icons img:hover {
@@ -80,7 +88,7 @@ body {
 .btn {
     width: 100%;
     background: rgba(255,255,255,0.08);
-    padding: 16px;
+    padding: 16px 22px;
     border-radius: 50px;
     margin: 12px 0;
     display: flex;
@@ -105,11 +113,14 @@ body {
     height: 27px;
 }
 
+a {
+    text-decoration: none;
+}
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 </style>
 </head>
 
@@ -128,7 +139,7 @@ body {
     <div class="social-icons">
         <a href="https://www.instagram.com/libra_necklace"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/instagram-1-svgrepo-com.svg"></a>
         <a href="https://www.snapchat.com/add/mwssqldlmyzn"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/snapchat-svgrepo-com.svg"></a>
-        <a href="https://www.tiktok.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/tiktok-svgrepo-com.svg"></a>
+        <a href="https://www.tiktok.com/@libra_necklace"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/tiktok-svgrepo-com.svg"></a>
         <a href="https://wa.me/966552918777"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/whatsapp-svgrepo-com.svg"></a>
     </div>
 
@@ -157,7 +168,7 @@ body {
         </div>
     </a>
 
-    <a href="https://www.tiktok.com/">
+    <a href="https://www.tiktok.com/@libra_necklace">
         <div class="btn">
             <img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/tiktok-svgrepo-com.svg">
             <span>TikTok</span>
