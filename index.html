@@ -6,133 +6,127 @@
 <title>روابط التواصل</title>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        font-family: 'Cairo', sans-serif;
+        background: url("https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/pack.jpg") no-repeat center center/cover;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
+        text-align: center;
+    }
+
+    .overlay {
+        background: rgba(0,0,0,0.50);
+        width: 100%;
         min-height: 100vh;
+        padding: 40px 15px;
     }
 
     .container {
-        width: 90%;
         max-width: 420px;
-        text-align: center;
-        padding: 30px 10px;
-        animation: fadeIn 1.1s ease;
+        margin: auto;
+        animation: fadeIn 1.0s ease;
     }
 
-    /* Logo */
+    /* Logo / Necklace Icon */
     .logo {
-        width: 120px;
-        height: auto;
-        margin: 0 auto 15px;
-        opacity: 0;
-        animation: slideDown 1.3s forwards;
+        width: 140px;
+        margin-top: 20px;
+        filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
+        animation: fadeSlide 1.3s ease;
     }
 
     .title {
-        font-size: 24px;
+        margin-top: 15px;
+        font-size: 28px;
         font-weight: 700;
-        margin-top: 10px;
-        opacity: 0;
-        animation: fadeSlide 1.3s forwards 0.2s;
+        color: #f5d98c; 
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.4);
+        animation: fadeSlide 1.3s ease 0.2s backwards;
     }
 
-    .subtitle {
-        font-size: 14px;
-        color: #777;
-        margin-top: 5px;
-        opacity: 0;
-        animation: fadeSlide 1.3s forwards 0.3s;
-    }
-
-    /* Icons Row */
+    /* Social Icons Row */
     .social-icons {
-        margin: 20px 0;
+        margin: 25px 0;
         display: flex;
         justify-content: center;
         gap: 18px;
-        opacity: 0;
-        animation: fadeSlide 1.3s forwards 0.5s;
+        animation: fadeSlide 1.3s ease 0.3s backwards;
     }
 
     .social-icons img {
-        width: 30px;
-        height: 30px;
-        filter: drop-shadow(0px 0px 5px #d0d0d0);
+        width: 32px;
+        height: 32px;
+        filter: drop-shadow(0px 0px 8px rgba(255,215,0,0.35));
         transition: 0.3s;
         cursor: pointer;
     }
 
     .social-icons img:hover {
-        transform: scale(1.2);
+        transform: scale(1.18);
     }
 
     /* Buttons */
     .btn {
         width: 100%;
-        background: white;
+        background: rgba(255,255,255,0.08);
         padding: 16px;
         border-radius: 50px;
         margin: 12px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 16px;
-        border: 1px solid #eee;
-        box-shadow: 0 0 12px rgba(255, 0, 130, 0.2);
+        font-size: 17px;
+        color: #f7e0a5;
+        border: 1px solid rgba(255,218,120,0.25);
+        box-shadow: 0 0 12px rgba(255, 215, 0, 0.20);
         cursor: pointer;
         transition: 0.3s;
+        backdrop-filter: blur(6px);
     }
 
     .btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 0 18px rgba(255, 0, 150, 0.35);
+        box-shadow: 0 0 18px rgba(255, 215, 0, 0.45);
+        background: rgba(255,255,255,0.15);
     }
 
     .btn img {
-        width: 26px;
-        height: 26px;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-        from { transform: translateY(-20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+        width: 27px;
+        height: 27px;
     }
 
     @keyframes fadeSlide {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 </style>
 </head>
 
 <body>
+
+<div class="overlay">
 <div class="container">
 
-    <!-- Logo -->
-    <img class="logo" src="https://i.postimg.cc/xCSNGMn7/logo.png" alt="Logo">
+    <!-- Necklace Icon -->
+    <img class="logo" src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/ddddd-artguru-artguru.png" alt="Logo">
 
-    <!-- Title -->
-    <div class="title">@أبو صقر</div>
-    <div class="subtitle">وصف صغير يوضع هنا</div>
+    <!-- Gold Title -->
+    <div class="title">أهلاً بفخامتك...</div>
 
-    <!-- Icons Row -->
+    <!-- Social Icons -->
     <div class="social-icons">
         <a href="https://www.instagram.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/instagram-1-svgrepo-com.svg"></a>
         <a href="https://www.snapchat.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/snapchat-svgrepo-com.svg"></a>
         <a href="https://www.tiktok.com/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/tiktok-svgrepo-com.svg"></a>
         <a href="https://wa.me/"><img src="https://raw.githubusercontent.com/sorymohajer/mysociallinks/refs/heads/main/whatsapp-svgrepo-com.svg"></a>
     </div>
-
+    
     <!-- Buttons -->
     <a href="https://wa.me/">
         <div class="btn">
@@ -167,5 +161,7 @@
     </a>
 
 </div>
+</div>
+
 </body>
 </html>
