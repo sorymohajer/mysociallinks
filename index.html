@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معي</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #fc466b, #3f5efb);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .container {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px 25px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.15);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255,255,255,0.3);
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  }
+
+  .btn i {
+    font-size: 26px;
+  }
+
+  .btn:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 8px 30px rgba(255,255,255,0.4);
+  }
+
+  footer {
+    margin-top: 25px;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  
+  <h1>تواصل معي</h1>
+
+  <a class="btn" href="https://www.instagram.com/username" target="_blank">
+    <i class="fab fa-instagram"></i>
+    إنستغرام
+  </a>
+
+  <a class="btn" href="https://www.tiktok.com/@username" target="_blank">
+    <i class="fab fa-tiktok"></i>
+    تيك توك
+  </a>
+
+  <a class="btn" href="https://wa.me/1234567890" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    واتساب
+  </a>
+
+  <a class="btn" href="https://facebook.com/username" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+    فيسبوك
+  </a>
+
+  <footer>© جميع الحقوق محفوظة</footer>
+
+</div>
+
+</body>
+</html>
